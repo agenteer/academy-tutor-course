@@ -1,0 +1,75 @@
+[
+  {
+    "id": "abc-three-questions",
+    "question": "What are the three components of the ABC framework, and what role does each play in an agent?",
+    "answer": "Action is what the agent can do through its tools. Brain is the model that reasons and chooses the next step. Context is the information the model receives, including instructions, the task, documents, messages and selected external memory.",
+    "sources": [
+      "How AI Agents Actually Work, §1: the three ABC questions — https://agenteer.com/learn/tutorials/how-ai-agents-actually-work/#1-what-an-agent-is:~:text=What%20can%20it%20see%20and%20carry%3F,and%20through%20them%2C%20the%20world."
+    ]
+  },
+  {
+    "id": "harness-five-jobs",
+    "question": "What does a harness do to run an agent, and how do boundaries set by humans govern that work?",
+    "answer": "The harness executes tools for Action, calls the model for Brain, and selects and manages information for Context. It runs the loop that connects them and enforces the boundary: when work starts and stops, what it may access or do, and when a person must decide.",
+    "sources": [
+      "How AI Agents Actually Work, §2: harness definition — https://agenteer.com/learn/tutorials/how-ai-agents-actually-work/#2-what-a-harness-is:~:text=the%20harness%20is%20the%20control%20layer%20that%20operates%20Action%2C%20Brain%2C%20and%20Context%20in%20a%20loop%20within%20boundaries%20set%20by%20humans",
+      "How AI Agents Actually Work, §2: boundaries and human direction — https://agenteer.com/learn/tutorials/how-ai-agents-actually-work/#2-what-a-harness-is:~:text=It%20operates%20within%20boundaries%20set%20by%20humans%3A,Permissions%20and%20approval%20checks%20limit%20how%20the%20agent%20may%20act."
+    ]
+  },
+  {
+    "id": "harness-vs-abc",
+    "question": "How is an agent different from its model and its harness?",
+    "answer": "The agent is the whole system pursuing a goal. The model provides the Brain: it reasons and chooses what to do next. The harness is the control layer that manages Context, calls the model and carries out Action through permitted tools. It runs the loop within boundaries set by humans; neither the model nor the harness alone is the whole agent.",
+    "sources": [
+      "How AI Agents Actually Work, §2: harness definition — https://agenteer.com/learn/tutorials/how-ai-agents-actually-work/#2-what-a-harness-is:~:text=the%20harness%20is%20the%20control%20layer%20that%20operates%20Action%2C%20Brain%2C%20and%20Context%20in%20a%20loop%20within%20boundaries%20set%20by%20humans",
+      "How AI Agents Actually Work, §2: agent, ABC and harness together — https://agenteer.com/learn/tutorials/how-ai-agents-actually-work/#2-what-a-harness-is:~:text=An%20agent%20is%20ABC%2C%20run%20in%20a%20loop%20by%20a%20harness%2C%20inside%20a%20boundary%20you%20set,with%20the%20agency%20to%20decide%20its%20next%20step."
+    ]
+  },
+  {
+    "id": "control-vs-data-layer",
+    "question": "Why can two agents using the same model and control code behave differently when given different context?",
+    "answer": "The harness controls execution, while Context supplies the instructions, task information, knowledge and external memory that guide the model. Different context can therefore produce different behavior with the same control code and model.",
+    "sources": [
+      "How AI Agents Actually Work, §2: control layer and data layer — https://agenteer.com/learn/tutorials/how-ai-agents-actually-work/#2-what-a-harness-is:~:text=Put%20another%20way%3A%20the%20harness%20is%20the%20control%20layer,the%20data%20layer%20is%20what%20makes%20an%20agent%20yours."
+    ]
+  },
+  {
+    "id": "loop-two-scales",
+    "question": "How does the ABC loop work within a task and across separate runs? Does carrying experience into a later run require retraining the model?",
+    "answer": "Within a task, the model receives context, reasons and chooses an action; the harness executes it, returns the result as context, and continues until a stopping condition is met. Across runs, the harness can save useful information and supply it as context to a later run. This does not require retraining: external memory changes, while the model’s weights remain unchanged.",
+    "sources": [
+      "How AI Agents Actually Work, §1: the loop at two scales — https://agenteer.com/learn/tutorials/how-ai-agents-actually-work/#1-what-an-agent-is:~:text=The%20loop%20sits%20at%20the%20center%20of%20ABC%2C%20and%20it%20runs%20at%20two%20scales.,The%20second%20loop%20is%20made%20of%20the%20first%3B%20without%20turns%20there%20is%20nothing%20to%20accumulate.",
+      "How AI Agents Actually Work: external memory does not change model weights — https://agenteer.com/learn/tutorials/how-ai-agents-actually-work/#where-an-agents-knowledge-comes-from:~:text=The%20model%E2%80%99s%20weights%20do%20not%20change%20when%20you%20use%20it.,Delete%20the%20memory%20file%20and%20the%20agent%20forgets%2C%20while%20the%20model%20is%20untouched.",
+      "AI Agent Engineering: improvement depends on evaluated feedback — https://agenteer.com/blog/ai-agent-engineering-building-agentic-systems-for-enduring-value/#what-about-agentic-engineering:~:text=That%20improvement%20depends%20on%20an%20engineered%20feedback%20loop%3A,incorporating%20validated%20improvements%20into%20subsequent%20work."
+    ]
+  },
+  {
+    "id": "agency-and-boundary",
+    "question": "What is agency, and why does an agent need boundaries beyond a time limit?",
+    "answer": "Agency is the ability to choose and take actions toward a goal. A time limit only limits duration; it does not determine what the agent may access or do. Boundaries must also set the scope of resources and actions and specify when human approval is required. Goals and instructions guide the work, and people check results and redirect it when needed.",
+    "sources": [
+      "How AI Agents Actually Work, §1: agency — https://agenteer.com/learn/tutorials/how-ai-agents-actually-work/#1-what-an-agent-is:~:text=Agency%20is%20in%20the%20definition%20above%3A,the%20capacity%20to%20make%20autonomous%20decisions%20and%20take%20independent%20actions%20in%20pursuit%20of%20goals.",
+      "How AI Agents Actually Work, §2: boundaries and human direction — https://agenteer.com/learn/tutorials/how-ai-agents-actually-work/#2-what-a-harness-is:~:text=It%20operates%20within%20boundaries%20set%20by%20humans%3A,Permissions%20and%20approval%20checks%20limit%20how%20the%20agent%20may%20act.",
+      "Intent Is All You Need, Still: consequences, reversibility and budget — https://agenteer.com/resources/intent-is-all-you-need-still/#autonomy-depends-on-the-work-being-delegated:~:text=How%20well%20the%20agent%20understands%20the%20relevant%20judgment%20is%20one%20factor,even%20if%20the%20instructions%20are%20equally%20clear."
+    ]
+  },
+  {
+    "id": "agent-engineering-vs-agentic-engineering",
+    "question": "A developer uses a coding agent to build an inventory app with no AI features. What is agentic engineering in this example, and where does AI agent engineering fit?",
+    "answer": "Agentic engineering is developing software with coding agents while retaining human direction and responsibility for the result. AI agent engineering is designing, building and improving agent systems, including the coding-agent development setup. The inventory app need not itself be an agent: the app being produced and the agent system producing it are different systems. The activities also overlap when agents help build other agent systems.",
+    "sources": [
+      "AI Agent Engineering: definition of agentic engineering — https://agenteer.com/blog/ai-agent-engineering-building-agentic-systems-for-enduring-value/#what-about-agentic-engineering:~:text=Agentic%20engineering%3A%20The%20disciplined%20practice,human%20direction%20and%20responsibility%20for%20the%20result.",
+      "AI Agent Engineering: developing with agents versus developing agents — https://agenteer.com/blog/ai-agent-engineering-building-agentic-systems-for-enduring-value/#what-about-agentic-engineering:~:text=This%20highlights%20a%20useful%20distinction%20between%20developing%20software%20with%20agents%20and%20developing%20agents.,the%20two%20activities%20overlap%E2%80%94but%20they%20are%20not%20interchangeable.",
+      "AI Agent Engineering: engineering the development system — https://agenteer.com/blog/ai-agent-engineering-building-agentic-systems-for-enduring-value/#what-about-agentic-engineering:~:text=Engineering%20the%20development%20system%20means%20deciding,just%20as%20it%20does%20a%20customer-support%20agent%20or%20a%20network%20of%20agents%20performing%20business%20tasks."
+    ]
+  },
+  {
+    "id": "human-in-and-on-the-loop",
+    "question": "An agent can revise drafts automatically, but the intended style is still unclear. When should the person be in the loop, move on the loop, or return to it?",
+    "answer": "The person is in the loop to make a needed decision, such as choosing between sample drafts to clarify the style. Once there is enough direction, the person can move on the loop: oversee results and intervene when needed while work continues without approval of every iteration. New uncertainty or a decision requiring human approval brings the person back in. Risk, reversibility and budget help determine how much autonomy is appropriate.",
+    "sources": [
+      "Intent Is All You Need, Still: moving in, on and back into the loop — https://agenteer.com/resources/intent-is-all-you-need-still/#autonomy-depends-on-the-work-being-delegated:~:text=In%20loop%20engineering%2C%20the%20distinction%20between%20being%20in%20the%20loop%20and%20on%20it,even%20if%20the%20instructions%20are%20equally%20clear.",
+      "Loop Engineering: automatic drafting with a human send gate — https://agenteer.com/blog/loop-engineering/#where-you-stand-in-the-loop-or-on-it:~:text=Customer%20support%20makes%20the%20move%20concrete,I%E2%80%99d%20keep%20the%20send%20gate%20for%20a%20good%20while%3B%20the%20loop%20earns%20rope."
+    ]
+  }
+]

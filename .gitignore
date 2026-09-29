@@ -1,0 +1,17 @@
+# Learner work is created locally; publish only deliberately reviewed examples.
+/academy-tutor/
+/academy-tutor-generated/
+/adaptation-demo/
+/scheduled-review/
+/prime-example/
+node_modules/
+.pi/
+.prime/
+trace/
+learner.json
+attempts.jsonl
+behavior-results.json
+.env
+.env.*
+.DS_Store
+*.swp
