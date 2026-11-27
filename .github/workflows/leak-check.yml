@@ -1,0 +1,21 @@
+# Put this file at .github/workflows/leak-check.yml in a public repository.
+# It runs the shared leak check on pull requests, on pushes to main, and once a week over the whole tree and history.
+# Requires the secret LEAK_TERMS (an organization secret for agenteer repositories, a repository secret elsewhere).
+name: leak-check
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+  schedule:
+    - cron: '17 8 * * 1'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  leak-check:
+    uses: agenteer/leak-check/.github/workflows/leak-check.yml@cc649f5b8733c62fff65db3948c6b06aab5a459d
+    secrets:
+      LEAK_TERMS: ${{ secrets.LEAK_TERMS }}
